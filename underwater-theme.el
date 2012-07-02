@@ -35,7 +35,7 @@
 
 ;;; Code:
 
-(deftheme underwater "Port of underwater Vim theme")
+(deftheme underwaterd "Port of underwater Vim theme")
 
 (let ((*background-color*   "#102235")
       (*brown*              "#E64")
@@ -49,7 +49,7 @@
       (*line-number*        "#2F577C")
       (*method-declaration* "#AF81F4")
       (*mode-line-bg*       "#0A1721")
-      (*mode-line-fg*       "#FFEC99")
+      (*mode-line-fg*       "#8EAFD1")
       (*mode-line-inactive* "#4E6F91")
       (*normal*             "#DFEFF6")
       (*number*             "#96DEFA")
@@ -69,7 +69,7 @@
       (*visual-selection*   "#262D51"))
 
   (custom-theme-set-faces
-   'underwater
+   'underwaterd
 
    `(bold ((t (:bold t))))
    `(button ((t (:foreground, *keywords* :underline t))))
@@ -103,7 +103,7 @@
 
    ;; GUI
    `(fringe ((t (:background, *background-color*))))
-   `(linum ((t (:background, *line-number*))))
+   `(linum ((t (:background, *vertical-border*))))
    `(minibuffer-prompt ((t (:foreground, *variable*))))
    `(mode-line ((t (:background, *mode-line-bg* :foreground, *mode-line-fg*))))
    `(mode-line-inactive ((t (:background, *mode-line-bg* :foreground, *mode-line-inactive*))))
@@ -132,7 +132,12 @@
    `(org-special-keyword ((t (:foreground, *variable*))))
    `(org-link ((t (:foreground, *keywords* :underline t))))
    `(org-checkbox ((t (:foreground, *keywords* :background, *background-color* :bold t))))
-   `(org-clock-overlay ((t (:foreground, *mode-line-bg* :background, *string*))))))
+   `(org-clock-overlay ((t (:foreground, *mode-line-bg* :background, *string*))))
+
+   ;; which-func
+   `(which-func ((t (:foreground, *normal*))))
+
+   ))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
@@ -143,5 +148,5 @@
 ;; no-byte-compile: t
 ;; End:
 
-(provide-theme 'underwater)
-;;; underwater-theme.el ends here
+(provide-theme 'underwaterd)
+;;; underwaterd-theme.el ends here
