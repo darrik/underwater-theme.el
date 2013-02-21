@@ -1,22 +1,24 @@
-;;; underwater-theme.el --- A gentle, deep blue color theme
+;;; underwaterd-theme.el --- A gentle, deep blue color theme
 
 ;; Copyright (C) 2012 Jon-Michael Deldin
-
 ;; Author: Jon-Michael Deldin <dev@jmdeldin.com>
 ;; Keywords: faces
 ;; Compatibility: 24.1
 ;; Version: 1.0.0
 
+;; Modified by Rikard Glans (rikard@ecx.se)
+;; Time-stamp: <2013-02-21 16:08:59>
+
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or (at
 ;; your option) any later version.
-
+;;
 ;; This program is distributed in the hope that it will be useful, but
 ;; WITHOUT ANY WARRANTY; without even the implied warranty of
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 ;; General Public License for more details.
-
+;;
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program. If not, see <http://www.gnu.org/licenses/>.
 
@@ -42,7 +44,7 @@
       (*comments*           "#4E6F91")
       (*constant*           "#FFC287")
       (*current-line*       "#18374f")
-      (*cursor-block*       "#FFFFFFF")
+      (*cursor-block*       "#FFFFFF")
       (*cursor-underscore*  "#FFFAAA")
       (*keywords*           "#8AC6F2")
       (*light-purple*       "#FFCCFF")
@@ -66,7 +68,18 @@
       (*type*               "#5BA0EB")
       (*variable*           "#8AC6F2")
       (*vertical-border*    "#0A1721")
-      (*visual-selection*   "#262D51"))
+      (*visual-selection*   "#262D51")
+
+      (*powerline-active-1*      "#8EAFD1")
+      (*powerline-active-1-bg*   "#1A2731")
+      (*powerline-active-2*      "#8EAFD1")
+      (*powerline-active-2-bg*   "#2A3741")
+      (*powerline-inactive-1*    "#4E6F91")
+      (*powerline-inactive-1-bg* "#0A1721")
+      (*powerline-inactive-2*    "#4E6F91")
+      (*powerline-inactive-2-bg* "#0A1721")
+
+      )
 
   (custom-theme-set-faces
    'underwaterd
@@ -102,13 +115,19 @@
    `(font-lock-warning-face ((t (:foreground, *red*))))
 
    ;; GUI
-   `(fringe ((t (:background, *background-color*))))
-   `(linum ((t (:background, *vertical-border*))))
+   `(fringe ((t (:foreground, *normal* :background, *background-color*))))
+   `(linum ((t (:foreground, *line-number* :background, *vertical-border*))))
    `(minibuffer-prompt ((t (:foreground, *variable*))))
    `(mode-line ((t (:background, *mode-line-bg* :foreground, *mode-line-fg*))))
    `(mode-line-inactive ((t (:background, *mode-line-bg* :foreground, *mode-line-inactive*))))
    `(text-cursor ((t (:background, *cursor-underscore*))))
    `(vertical-border ((t (:foreground, *vertical-border*)))) ;; between splits
+
+   ;; powerline
+   `(powerline-active1 ((t (:foreground ,*powerline-active-1* :background ,*powerline-active-1-bg* :inherit mode-line))))
+   `(powerline-active2 ((t (:foreground ,*powerline-active-2* :background ,*powerline-active-2-bg* :inherit mode-line))))
+   `(powerline-inactive1 ((t (:foreground ,*powerline-inactive-1* :background ,*powerline-inactive-1-bg* :inherit mode-line))))
+   `(powerline-inactive2 ((t (:foreground ,*powerline-inactive-2* :background ,*powerline-inactive-2-bg* :inherit mode-line))))
 
    ;; show-paren
    `(show-paren-mismatch ((t (:background, *red* :foreground, *normal* :weight bold))))
