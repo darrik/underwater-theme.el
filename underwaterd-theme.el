@@ -7,7 +7,7 @@
 ;; Version: 1.0.0
 
 ;; Modified by Rikard Glans (rikard@ecx.se)
-;; Time-stamp: <2013-02-21 16:08:59>
+;; Time-stamp: <2013-02-28 00:28:00>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -79,6 +79,16 @@
       (*powerline-inactive-2*    "#4E6F91")
       (*powerline-inactive-2-bg* "#0A1721")
 
+      ;;;; Rainbow delimiters
+      (*rdd-1*                   "#8AC6F2")
+      (*rdd-2*                   "#7EB8E3")
+      (*rdd-3*                   "#73AAD4")
+      (*rdd-4*                   "#679CC5")
+      (*rdd-5*                   "#5C8EB7")
+      (*rdd-6*                   "#5180A8")
+      (*rdd-7*                   "#457299")
+      (*rdd-8*                   "#3A648A")
+      (*rdd-9*                   "#2F577C")
       )
 
   (custom-theme-set-faces
@@ -155,6 +165,17 @@
 
    ;; which-func
    `(which-func ((t (:foreground, *normal*))))
+
+   ;; rainbow delimiters mode
+   `(rainbow-delimiters-depth-1-face  ((t (:foreground ,*rdd-1*))))
+   `(rainbow-delimiters-depth-2-face  ((t (:foreground ,*rdd-2*))))
+   `(rainbow-delimiters-depth-3-face  ((t (:foreground ,*rdd-3*))))
+   `(rainbow-delimiters-depth-4-face  ((t (:foreground ,*rdd-4*))))
+   `(rainbow-delimiters-depth-5-face  ((t (:foreground ,*rdd-5*))))
+   `(rainbow-delimiters-depth-6-face  ((t (:foreground ,*rdd-6*))))
+   `(rainbow-delimiters-depth-7-face  ((t (:foreground ,*rdd-7*))))
+   `(rainbow-delimiters-depth-8-face  ((t (:foreground ,*rdd-8*))))
+   `(rainbow-delimiters-depth-9-face  ((t (:foreground ,*rdd-9*))))
 
    ))
 
