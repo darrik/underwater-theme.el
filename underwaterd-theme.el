@@ -7,7 +7,7 @@
 ;; Version: 1.0.0
 
 ;; Modified by Rikard Glans (rikard@ecx.se)
-;; Time-stamp: <2013-02-28 00:28:00>
+;; Time-stamp: <2013-03-13 17:55:10>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -46,6 +46,7 @@
       (*current-line*       "#18374f")
       (*cursor-block*       "#FFFFFF")
       (*cursor-underscore*  "#FFFAAA")
+      (*fringe*             "#0A1721")
       (*keywords*           "#8AC6F2")
       (*light-purple*       "#FFCCFF")
       (*line-number*        "#2F577C")
@@ -67,7 +68,7 @@
       (*string*             "#89E14B")
       (*type*               "#5BA0EB")
       (*variable*           "#8AC6F2")
-      (*vertical-border*    "#0A1721")
+      (*vertical-border*    "#051321")
       (*visual-selection*   "#262D51")
 
       (*powerline-active-1*      "#8EAFD1")
@@ -97,7 +98,6 @@
    `(bold ((t (:bold t))))
    `(button ((t (:foreground, *keywords* :underline t))))
    `(default ((t (:background, *background-color* :foreground, *normal*))))
-   `(header-line ((t (:background, *mode-line-bg* :foreground, *normal*)))) ;; info header
    `(highlight ((t (:background, *current-line*))))
    `(highlight-face ((t (:background, *current-line*))))
    `(hl-line ((t (:background, *current-line* :underline t))))
@@ -125,7 +125,8 @@
    `(font-lock-warning-face ((t (:foreground, *red*))))
 
    ;; GUI
-   `(fringe ((t (:foreground, *normal* :background, *background-color*))))
+   `(fringe ((t (:foreground, *normal* :background, *fringe*))))
+   `(header-line ((t (:background, *fringe* :foreground, *normal*)))) ;; info header
    `(linum ((t (:foreground, *line-number* :background, *vertical-border*))))
    `(minibuffer-prompt ((t (:foreground, *variable*))))
    `(mode-line ((t (:background, *mode-line-bg* :foreground, *mode-line-fg*))))
