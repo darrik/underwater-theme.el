@@ -7,7 +7,7 @@
 ;; Version: 1.0.0
 
 ;; Modified by Rikard Glans (rikard@ecx.se)
-;; Time-stamp: <2013-03-13 17:55:10>
+;; Time-stamp: <2013-03-31 00:20:25>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -90,6 +90,9 @@
       (*rdd-7*                   "#457299")
       (*rdd-8*                   "#3A648A")
       (*rdd-9*                   "#2F577C")
+
+      (*flymake-info*            "#2F577C")
+      (*flymake-warn*            "#0F376C")
       )
 
   (custom-theme-set-faces
@@ -166,6 +169,11 @@
 
    ;; which-func
    `(which-func ((t (:foreground, *normal*))))
+
+   ;; Flymake
+   `(flymake-errline  ((t (:background ,*red*))))
+   `(flymake-infoline ((t (:background ,*flymake-info*))))
+   `(flymake-warnline ((t (:background ,*flymake-warn*))))
 
    ;; rainbow delimiters mode
    `(rainbow-delimiters-depth-1-face  ((t (:foreground ,*rdd-1*))))
