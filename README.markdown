@@ -1,5 +1,6 @@
-# underwater-theme.el for Emacs 24's `deftheme`
+# My fork of underwater-theme.el
 
-This is a pleasing, light-on-dark, blue theme for Emacs 24.1.
+Made a bunch of modifications over the months, check commit history if you're
+curious.
 
-![Screenshot of underwater theme](https://github.com/jmdeldin/underwater-theme.el/raw/master/screenshot.png)
+You can find the original [here](https://github.com/jmdeldin/underwater-theme.el).
