@@ -7,7 +7,7 @@
 ;; Version: 1.0.0
 
 ;; Modified by Rikard Glans (rikard@ecx.se)
-;; Time-stamp: <2013-03-31 00:20:25>
+;; Time-stamp: <2013-05-09 19:39:22>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -186,6 +186,13 @@
    `(rainbow-delimiters-depth-8-face  ((t (:foreground ,*rdd-8*))))
    `(rainbow-delimiters-depth-9-face  ((t (:foreground ,*rdd-9*))))
 
+   ;; M-x customize
+   `(custom-group-tag    ((t (:foreground ,*type*))))
+   `(custom-face-tag     ((t (:foreground ,*keywords*))))
+   `(custom-variable-tag ((t (:foreground ,*keywords*))))
+   `(custom-state        ((t (:foreground ,*string*))))
+   `(widget-field        ((t (:foreground ,*normal* :background ,*operators*))))
+
    ))
 
 ;;;###autoload
@@ -193,9 +200,11 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
+(provide-theme 'underwaterd)
+
 ;; Local Variables:
 ;; no-byte-compile: t
+;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
 ;; End:
 
-(provide-theme 'underwaterd)
 ;;; underwaterd-theme.el ends here
