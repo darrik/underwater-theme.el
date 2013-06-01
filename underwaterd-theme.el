@@ -7,7 +7,7 @@
 ;; Version: 1.0.0
 
 ;; Modified by Rikard Glans (rikard@ecx.se)
-;; Time-stamp: <2013-05-09 19:39:22>
+;; Time-stamp: <2013-06-01 02:50:13>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@
       (*comments*           "#4E6F91")
       (*constant*           "#FFC287")
       (*current-line*       "#18374f")
-      (*cursor-block*       "#FFFFFF")
+      (*cursor-block*       "#6785c5")
       (*cursor-underscore*  "#FFFAAA")
       (*fringe*             "#0A1721")
       (*keywords*           "#8AC6F2")
@@ -134,6 +134,7 @@
    `(minibuffer-prompt ((t (:foreground, *variable*))))
    `(mode-line ((t (:background, *mode-line-bg* :foreground, *mode-line-fg*))))
    `(mode-line-inactive ((t (:background, *mode-line-bg* :foreground, *mode-line-inactive*))))
+   `(cursor ((t (:background, *cursor-block*))))
    `(text-cursor ((t (:background, *cursor-underscore*))))
    `(vertical-border ((t (:foreground, *vertical-border*)))) ;; between splits
 
@@ -162,10 +163,14 @@
    ;; org-mode
    `(org-date ((t (:foreground, *light-purple* :underline t))))
    `(org-level-1 ((t (:foreground, *string*))))
+   `(org-table ((t (:foreground, *keywords*))))
+   `(org-meta-line ((t (:foreground, *comments*))))
    `(org-special-keyword ((t (:foreground, *variable*))))
    `(org-link ((t (:foreground, *keywords* :underline t))))
    `(org-checkbox ((t (:foreground, *keywords* :background, *background-color* :bold t))))
    `(org-clock-overlay ((t (:foreground, *mode-line-bg* :background, *string*))))
+   `(org-document-title ((t (:foreground, *type*))))
+   `(org-document-info-keyword ((t (:foreground, *comments*))))
 
    ;; which-func
    `(which-func ((t (:foreground, *normal*))))
@@ -192,6 +197,9 @@
    `(custom-variable-tag ((t (:foreground ,*keywords*))))
    `(custom-state        ((t (:foreground ,*string*))))
    `(widget-field        ((t (:foreground ,*normal* :background ,*operators*))))
+
+   ;; semantic-mode
+   `(semantic-highlight-func-current-tag-face ((t (:background ,*visual-selection*))))
 
    ))
 
