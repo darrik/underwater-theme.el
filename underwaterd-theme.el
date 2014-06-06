@@ -7,7 +7,7 @@
 ;; Version: 1.0.0
 
 ;; Modified by Rikard Glans (rikard@ecx.se)
-;; Time-stamp: <2013-06-01 02:50:13>
+;; Time-stamp: <2014-06-07 00:47:49>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -81,15 +81,16 @@
       (*powerline-inactive-2-bg* "#0A1721")
 
       ;;;; Rainbow delimiters
-      (*rdd-1*                   "#8AC6F2")
-      (*rdd-2*                   "#7EB8E3")
-      (*rdd-3*                   "#73AAD4")
-      (*rdd-4*                   "#679CC5")
-      (*rdd-5*                   "#5C8EB7")
-      (*rdd-6*                   "#5180A8")
-      (*rdd-7*                   "#457299")
-      (*rdd-8*                   "#3A648A")
-      (*rdd-9*                   "#2F577C")
+      ;; (*rdd-1*                   "#8AC6F2")
+      (*rdd-1*                   "#7EB8E3")
+      (*rdd-2*                   "#73AAD4")
+      (*rdd-3*                   "#679CC5")
+      (*rdd-4*                   "#5C8EB7")
+      (*rdd-5*                   "#5180A8")
+      (*rdd-6*                   "#457299")
+      (*rdd-7*                   "#3A648A")
+      (*rdd-8*                   "#2F577C")
+      (*rdd-9*                   "#30597E")
 
       (*flymake-info*            "#2F577C")
       (*flymake-warn*            "#0F376C")
@@ -200,6 +201,11 @@
 
    ;; semantic-mode
    `(semantic-highlight-func-current-tag-face ((t (:background ,*visual-selection*))))
+
+   ;; web-mode
+   `(web-mode-html-tag-face         ((t (:foreground ,*type*))))
+   `(web-mode-html-attr-name-face   ((t (:foreground ,*variable*))))
+   `(web-mode-html-tag-bracket-face ((t (:foreground ,*rdd-1*))))
 
    ))
 
