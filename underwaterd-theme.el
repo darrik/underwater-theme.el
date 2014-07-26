@@ -7,7 +7,7 @@
 ;; Version: 1.0.0
 
 ;; Modified by Rikard Glans (rikard@ecx.se)
-;; Time-stamp: <2014-06-07 00:47:49>
+;; Time-stamp: <2014-07-26 02:52:46>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -81,7 +81,6 @@
       (*powerline-inactive-2-bg* "#0A1721")
 
       ;;;; Rainbow delimiters
-      ;; (*rdd-1*                   "#8AC6F2")
       (*rdd-1*                   "#7EB8E3")
       (*rdd-2*                   "#73AAD4")
       (*rdd-3*                   "#679CC5")
@@ -206,6 +205,9 @@
    `(web-mode-html-tag-face         ((t (:foreground ,*type*))))
    `(web-mode-html-attr-name-face   ((t (:foreground ,*variable*))))
    `(web-mode-html-tag-bracket-face ((t (:foreground ,*rdd-1*))))
+
+   ;; tuareg-mode
+   `(tuareg-font-lock-governing-face ((t (:foreground ,*rdd-3*))))
 
    ))
 
