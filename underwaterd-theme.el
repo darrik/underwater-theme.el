@@ -7,7 +7,7 @@
 ;; Version: 1.0.0
 
 ;; Modified by Rikard Glans (rikard@ecx.se)
-;; Time-stamp: <2014-07-26 02:52:46>
+;; Time-stamp: <2014-07-26 22:21:27>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -208,6 +208,7 @@
 
    ;; tuareg-mode
    `(tuareg-font-lock-governing-face ((t (:foreground ,*rdd-3*))))
+   `(tuareg-font-lock-operator-face ((t (:foreground ,*operators*))))
 
    ))
 
